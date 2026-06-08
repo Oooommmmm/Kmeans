@@ -1,2 +1,8 @@
-# Kmeans
-K-Nearest Neighbors (KNN) Classification
+## Steps Performed
+
+* **Data Preparation & Label Encoding:** Imported raw attributes using Pandas, handled administrative noise by stripping the `Id` feature, and converted categorical string targets (`Iris-setosa`, `Iris-versicolor`, `Iris-virginica`) into clean, numeric indices using Scikit-Learn's `LabelEncoder`.
+* **Feature Standardization:** Implemented `StandardScaler` to calculate zero-mean and unit-variance scaling across all dimensions, ensuring that distance-based calculations within the K-Nearest Neighbors algorithm are not disproportionately skewed by variations in raw measurement units.
+* **Dimensional Compression (PCA):** Executed Principal Component Analysis (PCA) to compress the 4-dimensional biological space into a 2-dimensional principal component coordinate space (`PC1` and `PC2`), enabling clear mapping of complex multi-variable decision surfaces onto a single plain layout.
+* **Model Selection & Dynamic Hyperparameter Control:** Constructed a flexible `KNeighborsClassifier` architecture controlled by an adjustable `CHOSEN_K` hyperparameter to observe how local vs. global neighbor voting thresholds actively adjust underlying prediction regions.
+* **Granular Predictive Evaluation:** Split empirical arrays into strict training and testing partitions (70/30 split) to evaluate target outcomes, outputting explicit validation insights via cross-examination confusion matrices and class-by-class precision/recall metrics.
+* **Decision Boundary Mapping:** Programmed a dense mathematical prediction grid spanning the entire feature map using NumPy coordinates, translating your configured model parameters directly into concrete, visible classification zones and color-shaded regions on a single layout graph.
